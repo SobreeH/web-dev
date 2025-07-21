@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part 5</title>
+</head>
+<body>
+    <h1> Finding the average of the the 3 numbers you entered</h1>
+        <p id="demo"></p>
+    <script type="text/javascript">
+        let n1 = parseInt(prompt("Enter number 1"));
+        let n2 = parseInt(prompt("Enter number 2"));
+        let n3 = parseInt(prompt("Enter number 3"));
+        
+        function mean(p1,p2,p3){
+            return (p1+p2+p3)/3
+        }
+
+        document.write("Average of " + n1 + ", " + n2 + ", " + n3 + "is " + mean(n1,n2,n3));
+    </script>
+</body>
+</html>
