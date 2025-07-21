@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: green;
+    color: white;
+    padding: 15px;
+}
+.main{
+    width: 100%;
+}
+.footer{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    clear: both;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: lightgreen;
+    color: white;
+}
+li:hover {
+    background-color: green;
+}
+/* For mobile phones: */
+.menu {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+.content {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+@media only screen and (min-width: 768px) {
+    /* for desktop */
+    .menu {width: 25%;}
+    .content {width: 75%;}
+}
+ 

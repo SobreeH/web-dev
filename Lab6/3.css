@@ -1,0 +1,24 @@
+/* styles.css */
+body {
+    text-align: center;
+}
+table{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    border: 1px solid ;
+    
+}
+tr {
+    padding: auto;
+}
+td{
+    padding: 10px;
+}
+.title {
+    
+    text-decoration: underline;
+    text-shadow: 2px 5px 6px;
+    font-weight: bold;
+}

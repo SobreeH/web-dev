@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input [type=text], input[type=email], input[type=password], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            width: 100%;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        input[type=submit]:hover{
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h3 style="text-align: center;">An example of a form validation</h3>
+    <form action="action.php" method="post">
+        <p>Full Name (only alphabetical and numeric characters with 6 to 12 characters are allowed)</p>
+        <input type="text" name="fullname" placeholder="Enter your name" 
+        pattern="[a-zA-Z\s\-]+" required>
+        <p>E-mail</p>
+        <input type="email" name="e-mail" placeholder="Enter your e-mail" required>
+        <p>Password (only alphabetical and numeric characters with 6 to 12 characters are allowed ) </p>
+        <input type="password" name="password" placeholder="Enter your password" pattern="[a-zA-Z0-9]{6,12}" required>
+        <p>Place of Birth</p>
+        <select name="place-of-birth">
+            <option value="yala">Yala</option>
+            <option value="pattani">Pattani</option>
+            <option value="narathiwat">Narathiwat</option>
+            <option value="others">Others</option>
+        </select>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
