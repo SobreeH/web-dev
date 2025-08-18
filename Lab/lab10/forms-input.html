@@ -2,11 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta autohor="wansobree hajihama 6620610023">
+    <title>form input</title>
 </head>
 <body>
-    
-    <form target="my.php" method="post"> 
+    <form action="form-submission.php" target="_blank" method="post" > 
         <label for="identity">name-surname: </label>
         <input type="text" id="identity" name="identity" placeholder="Enter your name and surname" required>
         <br><br>
@@ -26,15 +26,15 @@
             <option value="staff">staff</option>
         </select>
         <br><br>
-        <label for="talent">special talent: </label>
-        <textarea id="talent" name="talent" rows="4" cols="50" style="overflow-y: scroll;"></textarea>
+        <label for="talents">special talent: </label>
+        <textarea id="talents" name="talents" rows="4" cols="50" style="overflow-y: scroll;"></textarea>
         <br><br>
         <label for="tech">interested technology: </label>
-        <input type="checkbox" id="database" name="tech" value="database">
+        <input type="checkbox" id="database" name="database" value="database">
         <label for="database">database system</label>
-        <input type="checkbox" id="programming" name="tech" value="programming">
+        <input type="checkbox" id="programming" name="programming" value="programming">
         <label for="programming">programming</label>
-        <input type="checkbox" id="network" name="tech" value="network">
+        <input type="checkbox" id="network" name="network" value="network">
         <label for="network">network</label>
         <br><br>
         <input type="submit" value="Submit">
@@ -43,7 +43,3 @@
 
 </body>
 </html>
-
-<?php
-
-?>
