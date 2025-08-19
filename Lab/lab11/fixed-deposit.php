@@ -11,8 +11,8 @@
         <input type="number" id="no-year-deposit" name="no-year-deposit" min="1" required>
         <input type="submit" value="OK">
         <?php
-        $_year = $_POST['no-year-deposit'];
-
+        $_year = $_GET['no-year-deposit'];
+       
         
         ?>
     </form>
