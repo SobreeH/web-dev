@@ -10,17 +10,23 @@
         <label for="no-year-deposit">Number of year[s] to deposit</label>
         <input type="number" id="no-year-deposit" name="no-year-deposit" min="1" required>
         <input type="submit" value="OK">
-    <br>
-        <?php
+    <br><br>
+    </form>
+ <?php
+ 
+        echo "<form action='deposit-result.php' target='_blank' method='get'>";
         $_year = $_GET['no-year-deposit'];
-    if (isset($_year)) {
+        echo "<p>number of year(s) to deposit = $_year year(s)</p>";
+    
         for ($i = 1; $i <= $_year; $i++) {
             echo "<label for='year$i'>year $i</label>";
-            echo "<input type='number' id='year$i' name='year$i' required><br>";
+            echo "<input type='number' id='year$i' name='year$i' required><br><br>";
         }
-    }
-        
+    
+        echo "<input type='submit' value='Submit'>";
+        echo "</form>";
         ?>
-    </form>
+
 </body>
 </html>
+
