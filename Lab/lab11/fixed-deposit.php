@@ -6,26 +6,32 @@
     <title>fixed deposit</title>
 </head>
 <body>
-    <form action="fixed-deposit.php" method="get">
+    <form action="fixed-deposit.php" method="post">
         <label for="no-year-deposit">Number of year[s] to deposit</label>
-        <input type="number" id="no-year-deposit" name="no-year-deposit" min="1" required>
+<input type="number" id="no-year-deposit" name="no-year-deposit" min="1" max="10" required>
         <input type="submit" value="OK">
     <br><br>
     </form>
  <?php
- 
-        echo "<form action='deposit-result.php' target='_blank' method='get'>";
-        $_year = $_GET['no-year-deposit'];
-        echo "<p>number of year(s) to deposit = $_year year(s)</p>";
+     if (isset($_POST['no-year-deposit'])) {
+         
+         $_year = $_POST['no-year-deposit'];
+     
+        echo "<form action='deposit-result.php' target='_blank' method='post'>";
+       
+        echo "<label>Number of year(s) to deposit = $_year year(s)</label><br>";
+        echo "<input type='hidden' name='year' value='$_year'><br>";
     
         for ($i = 1; $i <= $_year; $i++) {
-            echo "<label for='year$i'>year $i</label>";
-            echo "<input type='number' id='year$i' name='year$i' required><br><br>";
+            echo "<label for='deposit$i'>year $i: </label>";
+            echo "<input type='number' id='deposit$i' name='deposit$i' min='0' required><br><br>";
         }
     
         echo "<input type='submit' value='Submit'>";
         echo "</form>";
+    }
         ?>
+
 
 </body>
 </html>
