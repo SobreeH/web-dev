@@ -13,6 +13,7 @@ echo "</pre>";
 
 $max_num = $num[0];
 $min_num = $num[0];
+
 for ($i=0; $i < count($num); $i++) {
     if($num[$i] > $max_num) {
         $max_num = $num[$i];

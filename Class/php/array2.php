@@ -9,6 +9,6 @@ $i=0;
 for ($i=0; $i<$num; $i++)
     {
     echo $people[$i]["Name"]."  ".$people[$i]["Surename"]."  ".$people[$i]["age"]." <br>";
- }
+ };
  
 ?>
