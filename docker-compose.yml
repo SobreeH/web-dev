@@ -6,21 +6,39 @@ services:
     volumes:
       - ./src:/var/www/html
     ports:
-      - 9000:80
+      - "9000:80"
     depends_on:
-      - mysql_db
-  mysql_db:
-    image: mysql:latest
-    command: --default-authentication-plugin=mysql_native_password
+      - mariadb
+    networks:
+      - devnet
+
+  mariadb:
+    image: mariadb:10.4.32 # stable LTS version
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: devdb # optional: auto-create a DB
+      MARIADB_USER: devuser # optional: create a non-root user
+      MARIADB_PASSWORD: devpass
+    ports:
+      - "3306:3306" # optional: access from host tools
+    networks:
+      - devnet
+
   phpmyadmin:
     image: phpmyadmin:latest
     restart: always
     ports:
-      - 9001:80
+      - "9001:80"
     environment:
-      PMA_ARBITRARY: 1
+      PMA_HOST: mariadb
+      PMA_USER: root
+      PMA_PASSWORD: root
     depends_on:
-      - mysql_db
+      - mariadb
+    networks:
+      - devnet
+
+networks:
+  devnet:
+    driver: bridge
