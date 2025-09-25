@@ -81,4 +81,13 @@ class Student
              " studying in faculty of ".$this->faculty." and major ".$this->major;
     }
 }
+class Ftime extends Student{
+    
+}
+class Ptime extends Student{
+    function getYearEnd()
+    {
+        parent::getYearEnd();
+    }
+}
 ?>
